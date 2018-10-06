@@ -1,0 +1,21 @@
+{
+  "name": "javasciptunittesting",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "testJs": "lite-server -c bs-js-config.json",
+    "testTs": "lite-server -c bs-ts-config.json",
+    "test": "jasmine",
+    "lite": "lite-server",
+    "start": "npm run lite"
+  },
+  "author": "Allen Conway",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/jasmine": "2.8.8",
+    "@types/node": "10.10.1",
+    "jasmine": "^3.2.0",
+    "lite-server": "2.4.0"
+  }
+}

@@ -1,0 +1,4 @@
+{
+    "port": 8000,
+    "startPath": "/tests/js/jsJasmineSpecRunner.html"
+}
