@@ -48,4 +48,32 @@ describe("jasmine built in matchers unit tests", function () {
         };
         expect(returnData).toEqual(this.person);
     });
+
+    it("should be close to value with specified precision", function () {
+        //2nd value is the precision after decimal; the default is '2'
+        expect(5.1349).toBeCloseTo(5.135, 3);
+    });
+
+});
+
+describe("using asymmetric equality testers", function() {
+        
+    it("should match corresponding values using the any tester", function() {
+        var myNumber = 9;
+        var myString = "Hello";
+        var myObject = {};
+
+        expect(myNumber).toEqual(jasmine.any(Number));
+        expect(myString).toEqual(jasmine.any(String));
+        expect(myObject).toEqual(jasmine.any(Object));
+    });
+
+    it('should return true with valid value is not null or undefined using anything tester', function() {
+        var myValue = 1;
+        var myObject = null;
+        
+        expect(myValue).toEqual(jasmine.anything());
+        expect(myObject).not.toEqual(jasmine.anything());
+    });
+
 });

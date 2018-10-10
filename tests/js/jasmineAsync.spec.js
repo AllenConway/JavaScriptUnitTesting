@@ -1,16 +1,15 @@
 /// <reference path="../../src/js/carService.js" />
 
-xdescribe("Async calls using the jasmine done callback", function () {
+describe("Async calls using the jasmine done callback", function () {
     let result = false;
     beforeEach(function (done) {
-        Q.delay(2500).then(function () {
+        setTimeout(function () {
             result = true;
             done();
-        });
+        }, 100);
     });
-    it("should wait until the done callback is called and return the result of the fulfilled promise", function (done) {
+    it("should wait until the done callback is called and return the result of the fulfilled promise", function () {
         expect(result).toEqual(true);
-        done();
     });
 });
 describe("Async calls using the jasmine clock and tick functions", function () {

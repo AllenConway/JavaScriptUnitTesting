@@ -75,13 +75,5 @@ describe("engine calculations when using jasmine spies", function () {
         expect(carService.getCars).toHaveBeenCalled();
         expect(cars[0].year).toEqual(2016);
     });
-    //it("should call carService using createSpy and spyOn", function () {
-    //   //Arrange
-    //   var carSrvSpy = spyOn(CarService, "getCars");
-    //   var engineCalc = new EngineCalculations(carSrvSpy);
-    //   //Act
-    //   var result = engineCalc.calculateCarData();
-    //   //Assert
-    //   expect(CarService.getCars).toHaveBeenCalled();
-    //});
+    
 });
