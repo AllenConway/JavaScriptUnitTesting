@@ -12,10 +12,6 @@ describe("jasmine built in matchers unit tests", function () {
         expect('Hello').toEqual('Hello');
     });
 
-    it("boolTest should be truthy", function () {
-        expect(this.boolTest).toBeTruthy();
-    });
-
     it("boolTest should be true", function () {
         expect(this.boolTest).toBe(true);
     });
@@ -63,6 +59,8 @@ describe("using asymmetric equality testers", function() {
         var myString = "Hello";
         var myObject = {};
 
+        // jasmine.any takes a constructor or "class" name as an expected value. 
+        // It returns true if the constructor matches the constructor of the actual value.
         expect(myNumber).toEqual(jasmine.any(Number));
         expect(myString).toEqual(jasmine.any(String));
         expect(myObject).toEqual(jasmine.any(Object));

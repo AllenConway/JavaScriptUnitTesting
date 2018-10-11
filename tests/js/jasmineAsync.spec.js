@@ -8,7 +8,7 @@ describe("Async calls using the jasmine done callback", function () {
             done();
         }, 100);
     });
-    it("should wait until the done callback is called and return the result of the fulfilled promise", function () {
+    it("should wait until the done function is called to evaluate the result", function () {
         expect(result).toEqual(true);
     });
 });

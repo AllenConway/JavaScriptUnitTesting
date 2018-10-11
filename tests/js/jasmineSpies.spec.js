@@ -70,10 +70,10 @@ describe("engine calculations when using jasmine spies", function () {
         var engineCalc = new EngineCalculationsJs(carService);
         //Act
         var result = engineCalc.calculateCarData();
-        var cars = carService.getCars();
+
         //Assert
         expect(carService.getCars).toHaveBeenCalled();
-        expect(cars[0].year).toEqual(2016);
+        expect(result[0].year).toEqual(2016);
     });
     
 });
