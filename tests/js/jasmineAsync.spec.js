@@ -33,6 +33,10 @@ describe("Async calls using the jasmine clock and tick functions", function () {
 describe("Async calls using jasmine done callback via an async service call", function () {
     let flag = false;
     beforeEach(function (done) {
+        // Note: this unit test will slow down the entire suite of tests as it makes the 
+        // physical long running call which has an emulated wait of .5 seconds (internally). 
+        // It represents an example where a mock _should_ be used instead
+        // Exclude this test and the suite of tests will run significantly faster
         CarServiceJs.getCarsAsync()
             .then(function (result) {
                 flag = result;
